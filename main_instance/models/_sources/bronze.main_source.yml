@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: main_source
+    description: "Consolidated raw data sources from local storage."
+    tables:
+      - name: raw_exercise
+        description: "Exercise master data and muscle group mappings sourced from CSV."
+        meta:
+          external_location: "read_csv('.storage/sources/exercise_mapping.csv')"
+      
+      - name: raw_user
+        description: "CRM user profile data sourced from Parquet files."
+        meta:
+          external_location: "read_parquet('.storage/sources/crm_users.parquet')"
+          
+      - name: raw_log
+        description: "Transactional workout event logs sourced from semi-structured JSON."
+        meta:
+          external_location: "read_json_auto('.storage/sources/workout_logs.json')"

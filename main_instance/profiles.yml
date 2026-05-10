@@ -1,0 +1,13 @@
+main_instance:
+  outputs:
+    dev:
+      type: duckdb
+      path: .storage/dev/dev_warehouse.duckdb
+      threads: 1
+
+    prod:
+      type: duckdb
+      path: .storage/prod/prod_warehouse.duckdb
+      threads: 4
+
+  target: dev

@@ -1,0 +1,11 @@
+logs/
+__marimo__/
+__pycache__/
+.venv/
+
+.storage/sources/*
+.storage/dev/*
+.storage/prod/*
+
+*.pyc
+.env
